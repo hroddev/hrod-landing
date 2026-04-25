@@ -61,4 +61,40 @@
   .animate-fade-in {
     animation: fade-in 0.8s ease-out forwards;
   }
+
+  /* Terminal cursor blinking */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  /* Typing effect for terminal lines */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  .animate-typing {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.5s steps(40, end) forwards;
+  }
+
+  /* Staggered fade-in for terminal lines */
+  .terminal-line {
+    opacity: 0;
+    animation: fade-in 0.4s ease-out forwards;
+  }
+
+  .terminal-line:nth-child(1) { animation-delay: 0.3s; }
+  .terminal-line:nth-child(2) { animation-delay: 0.8s; }
+  .terminal-line:nth-child(3) { animation-delay: 1.3s; }
+  .terminal-line:nth-child(4) { animation-delay: 1.8s; }
+  .terminal-line:nth-child(5) { animation-delay: 2.3s; }
+  .terminal-line:nth-child(6) { animation-delay: 2.8s; }
+  .terminal-line:nth-child(7) { animation-delay: 3.3s; }
 }
